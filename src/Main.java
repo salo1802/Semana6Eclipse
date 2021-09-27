@@ -71,6 +71,7 @@ public void draw() {
 						
 						while(true) {
 							String line = reader.readLine();
+							System.out.println(line);
 							if(line.equals("upTrue")){
 								y-=5;
 							}
@@ -85,10 +86,11 @@ public void draw() {
 							}
 							if(!line.equals("upTrue")&&!line.equals("downTrue")
 							&&!line.equals("leftTrue")&&!line.equals("rightTrue")) {
-								String[] colors = line.split(".");
-								r = Integer.parseInt(colors[0]);
-								g = Integer.parseInt(colors[1]);
-								b = Integer.parseInt(colors[2]);
+								String[] colors = line.split("x");
+								if(colors[0].equals("color")) {
+								r = Integer.parseInt(colors[1]);
+								g = Integer.parseInt(colors[2]);
+								b = Integer.parseInt(colors[3]);}
 							}
 						}
 						
